@@ -7,6 +7,8 @@ import PokemonList from './components/pokemonList/PokemonList.jsx';
 import NavBar from './components/NavBar/NavBar';
   // Import the component that shows details for a single Pokémon
 import PokemonDetails from './components/PokemonDetails/PokemonDetails';
+
+import PokemonForm from './components/PokemonForm/PokemonForm';
   // Import routing tools to show different content based on the URL
 import { Route, Routes } from 'react-router';
   // Import styles for this component
@@ -21,14 +23,20 @@ const initialState = [
   { _id: 5, name: 'charmeleon', weight: 190, height: 11 },
 ];
 
+
 const App = () => {
   // Set up state to hold the list of Pokémon
   const [pokemon, setPokemon] = useState(initialState);
 
+  const addPokemon = (newPokemonData) => {
+    newPokemonData._id = pokemon.length + 1;
+    setPokemon([...pokemon, newPokemonData])
+  }
+
   return (
     <>
       {/* Title at the top of the app */}
-      <h1>Pokemon!</h1>
+      <h1>Pokémon!</h1>
 
       {/* Navigation bar shown on all pages */}
       <NavBar />
@@ -45,6 +53,11 @@ const App = () => {
         <Route 
           path='/pokemon' 
           element={<PokemonList pokemon={pokemon} />} 
+        />
+
+        <Route 
+          path='/pokemon/new'
+          element={<PokemonForm addPokemon={addPokemon}/>} 
         />
 
         {/* When the user goes to a specific Pokémon ID, show its details */}
