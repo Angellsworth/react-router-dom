@@ -3,6 +3,9 @@
 import { useState } from 'react';
 //import PokemonList.jsx
 import PokemonList from './components/pokemonList/PokemonList.jsx';
+//import NavBar
+import NavBar from './components/NavBar/NavBar';
+import './App.css';
 
 const initialState = [
   { _id: 1, name: 'bulbasaur', weight: 69, height: 7 },
@@ -17,6 +20,7 @@ const App = () => {
   const [pokemon, setPokemon] = useState(initialState);
   return (
     <>
+    <NavBar />
       <h1>Pokemon!</h1>
       {/* render pokemonList and use props */}
       <PokemonList pokemon={pokemon} />
