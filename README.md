@@ -63,20 +63,6 @@ A fun, single-page React app that displays a list of Pokémon, lets users view i
 
 ---
 
-## 📁 Folder Structure
-
-src/
-├── components/
-│   ├── NavBar/
-│   ├── PokemonDetails/
-│   ├── PokemonForm/
-│   └── PokemonList/
-├── App.jsx
-├── App.css
-└── main.jsx
-
----
-
 ## 🚧 Future Ideas
 
 - Add Pokémon images from an API  
