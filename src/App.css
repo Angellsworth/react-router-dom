@@ -1,42 +1,94 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #10414a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* src/components/NavBar/NavBar.css */
+
+/* src/components/NavBar/NavBar.css */
+
+nav {
+  background-color: #10414a;
+  padding: 1rem 2rem;
+  width: 100vw;
+  /* full viewport width */
+  height: 60px;
+  position: fixed;
+  /* so it stays at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  gap: 2rem;
+}
+
+nav li {
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+nav li:hover {
+  color: #ffaca4;
+}
+
+h1 {
+  color: #d5415a;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h2 {
+  color: #317b52;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+  max-width: 600px;
+}
+
+li {
+  background-color: #5acdbd;
+  color: #104a39;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: transform 0.2s ease;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+li:hover {
+  transform: scale(1.05);
+  background-color: #7bd573;
+  cursor: pointer;
 }
